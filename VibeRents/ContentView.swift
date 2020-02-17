@@ -9,10 +9,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let posts = ["1", "2", "3"]
+    
     var body: some View {
         NavigationView {
             List {
-                Text("First row")
+                
+                ForEach(posts, id: \.self) { posts in
+                Text(posts.description.capitalized)
+                
+                }
+                
             }.navigationBarTitle(Text("Groups"))
         }
     }
