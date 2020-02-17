@@ -13,8 +13,7 @@ struct ContentView: View {
         NavigationView {
             List {
                 Text("First row")
-                
-            }
+            }.navigationBarTitle(Text("Groups"))
         }
     }
 }
