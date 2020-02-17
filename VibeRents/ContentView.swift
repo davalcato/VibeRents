@@ -16,6 +16,11 @@ struct ContentView: View {
         NavigationView {
             List {
                 
+                ScrollView {
+                    Text("Trending")
+                    
+                }
+                
                 ForEach(posts, id: \.self) { posts in
                 Text(posts.description.capitalized)
                 
