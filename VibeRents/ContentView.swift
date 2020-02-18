@@ -10,19 +10,33 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let posts = ["1", "2", "3"]
+    let posts = ["1", "2", "3","1", "2", "3"]
     
     var body: some View {
         NavigationView {
             List {
                 
-                ScrollView {
-                    Text("Trending")
+                ScrollView(.horizontal, showsIndicators: false) {
+                    VStack(alignment: .leading) {
+                        Text("Trending")
+                            HStack {
+                                Text("Group 1")
+                                Text("Group 1")
+                                Text("Group 1")
+                                Text("Group 1")
+                                Text("Group 1")
+                                Text("Group 1")
+                                Text("Group 1")
+                                Text("Group 1")
+                                Text("Group 1")
+                              
+                        }
+                    }
                     
-                }
+                }.frame(height: 150)
                 
-                ForEach(posts, id: \.self) { posts in
-                Text(posts.description.capitalized)
+            ForEach(posts, id: \.self) { post in
+                Text(post)
                 
                 }
                 
