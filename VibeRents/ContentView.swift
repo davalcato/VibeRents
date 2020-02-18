@@ -33,14 +33,23 @@ struct ContentView: View {
                         }
                     }
                     
-                }.frame(height: 150)
-                
+                }.frame(height: 100)
+            // This is the post rows
             ForEach(posts, id: \.self) { post in
-                Text(post)
-                
-                }
+                PostView()
+              }
                 
             }.navigationBarTitle(Text("Groups"))
+        }
+    }
+}
+
+struct PostView: View {
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text("Username")
+            Text("Post body text that will hopefully suport auto sizing vertically and span mutliple line")
+        
         }
     }
 }
