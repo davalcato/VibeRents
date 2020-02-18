@@ -49,7 +49,7 @@ struct PostView: View {
         VStack(alignment: .leading) {
             Text("Username")
             Text("Post body text that will hopefully suport auto sizing vertically and span mutliple line")
-        
+            Image("post_puppy")
         }
     }
 }
