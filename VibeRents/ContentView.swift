@@ -48,7 +48,10 @@ struct PostView: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Image("burger").frame(width: 70, height: 70).clipped()
+                Image("burger")
+                    .resizable()
+                    .frame(width: 60, height: 70)
+                    .clipped()
                 Text("Username").font(.headline)
                 
             }
