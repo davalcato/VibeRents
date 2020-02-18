@@ -61,7 +61,7 @@ struct PostView: View {
                 .resizable()
                 .frame(width: 400, height: 385)
 
-        }.padding(.leading, -20)
+        }.padding(.leading, -10)
     }
 }
 
