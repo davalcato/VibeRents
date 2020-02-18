@@ -50,6 +50,7 @@ struct PostView: View {
             HStack {
                 Image("burger")
                     .resizable()
+                    .clipShape(Circle())
                     .frame(width: 60, height: 70)
                     .clipped()
                 Text("Username").font(.headline)
@@ -57,6 +58,9 @@ struct PostView: View {
             }
             Text("Post body text that will hopefully suport auto sizing vertically and span mutliple line").lineLimit(nil)
             Image("post_puppy")
+                .resizable()
+                .frame(width: 400, height: 385)
+
         }.padding(.leading, -20)
     }
 }
