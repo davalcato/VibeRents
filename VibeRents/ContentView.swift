@@ -47,10 +47,10 @@ struct ContentView: View {
 struct PostView: View {
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Username")
+            Text("Username").font(.headline)
             Text("Post body text that will hopefully suport auto sizing vertically and span mutliple line")
             Image("post_puppy")
-        }
+        }.padding(.leading, -20)
     }
 }
 
