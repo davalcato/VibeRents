@@ -53,7 +53,11 @@ struct PostView: View {
                     .clipShape(Circle())
                     .frame(width: 60, height: 70)
                     .clipped()
-                Text("Username").font(.headline)
+                VStack {
+                    Text("Joe Chavez").font(.headline)
+                    Text("Posted 5 hrs ago").font(.subheadline)
+                }
+    
             }.padding(.leading, 16).padding(.top, 16)
             
             Text("Post body text that will hopefully suport auto sizing vertically and span mutliple line").lineLimit(nil)
