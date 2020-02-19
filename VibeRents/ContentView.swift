@@ -8,9 +8,16 @@
 
 import SwiftUI
 
+struct Post {
+    let id: Int
+    let username, text, imagename: String
+}
+
 struct ContentView: View {
     
-    let posts = ["1", "2", "3","1", "2", "3"]
+    let posts: [Post] = [
+        .init(id: 0, username: "Tanaya Henry", text: "Good old times in the bay area", imagename: "burger")
+    ]
     
     var body: some View {
         NavigationView {
@@ -35,7 +42,7 @@ struct ContentView: View {
                     
                 }.frame(height: 100)
             // This is the post rows
-            ForEach(posts, id: \.self) { post in
+                ForEach(posts, id: \.id) { post in
                 PostView()
               }
                 
@@ -53,10 +60,10 @@ struct PostView: View {
                     .clipShape(Circle())
                     .frame(width: 60, height: 70)
                     .clipped()
-                VStack {
+                VStack (alignment: .leading, spacing: 4) {
                     Text("Joe Chavez").font(.headline)
-                    Text("Posted 5 hrs ago").font(.subheadline)
-                }
+                    Text("Miami, Brickelli Bay").font(.subheadline)
+                }.padding(.leading, 8)
     
             }.padding(.leading, 16).padding(.top, 16)
             
