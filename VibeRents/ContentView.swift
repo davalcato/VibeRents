@@ -53,6 +53,7 @@ struct GroupView: View {
         VStack (alignment: .leading) {
             Image("hike")
             .resizable()
+            .cornerRadius(12)
             .frame(width: 60, height: 70)
             Text("These are the it girls").lineLimit(nil)
                 .padding(.leading, 0)
