@@ -72,7 +72,7 @@ struct PostView: View {
             }.padding(.leading, 16).padding(.top, 16)
             
             Text("Post body text that will hopefully suport auto sizing vertically and span mutliple line").lineLimit(nil)
-            Image("post_puppy")
+            Image(post.imagename)
                 .resizable()
                 .frame(width: 400, height: 385)
 
