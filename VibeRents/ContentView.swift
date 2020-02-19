@@ -16,7 +16,10 @@ struct Post {
 struct ContentView: View {
     
     let posts: [Post] = [
+        .init(id: 0, username: "Tanaya Henry", text: "Good old times in the bay area", imagename: "burger"),
         .init(id: 0, username: "Tanaya Henry", text: "Good old times in the bay area", imagename: "burger")
+        
+        
     ]
     
     var body: some View {
@@ -43,7 +46,7 @@ struct ContentView: View {
                 }.frame(height: 100)
             // This is the post rows
                 ForEach(posts, id: \.id) { post in
-                PostView()
+                PostView(post: post)
               }
                 
             }.navigationBarTitle(Text("Groups"))
@@ -52,6 +55,7 @@ struct ContentView: View {
 }
 
 struct PostView: View {
+    let post: Post
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -61,7 +65,7 @@ struct PostView: View {
                     .frame(width: 60, height: 70)
                     .clipped()
                 VStack (alignment: .leading, spacing: 4) {
-                    Text("Joe Chavez").font(.headline)
+                    Text(post.username).font(.headline)
                     Text("Miami, Brickelli Bay").font(.subheadline)
                 }.padding(.leading, 8)
     
