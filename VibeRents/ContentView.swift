@@ -30,20 +30,16 @@ struct ContentView: View {
                     VStack(alignment: .leading) {
                         Text("Trending")
                             HStack {
-                                Text("Group 1")
-                                Text("Group 1")
-                                Text("Group 1")
-                                Text("Group 1")
-                                Text("Group 1")
-                                Text("Group 1")
-                                Text("Group 1")
-                                Text("Group 1")
-                                Text("Group 1")
-                              
+                                VStack (alignment: .leading) {
+                                    Image("hike")
+                                    .resizable()
+                                    .frame(width: 60, height: 70)
+                                    Text("Group 1")
+                            }
                         }
                     }
                     
-                }.frame(height: 100)
+                }.frame(height: 180)
             // This is the post rows
                 ForEach(posts, id: \.id) { post in
                 PostView(post: post)
