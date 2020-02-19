@@ -65,7 +65,7 @@ struct PostView: View {
                     Text("Miami, Brickelli Bay").font(.subheadline)
                 }.padding(.leading, 8)
     
-            }.padding(.leading, 16).padding(.top, 16)
+            }.padding(.leading, 1).padding(.top, 16)
             
             Text("Post body text that will hopefully suport auto sizing vertically and span mutliple line").lineLimit(nil)
             Image(post.imagename)
