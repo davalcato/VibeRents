@@ -34,8 +34,9 @@ struct ContentView: View {
                                     Image("hike")
                                     .resizable()
                                     .frame(width: 60, height: 70)
-                                    Text("Group 1")
-                            }
+                                    Text("These are the it girls").lineLimit(nil)
+                                        .padding(.leading, 0)
+                                }.frame(width: 120).padding(.leading, 0)
                         }
                     }
                     
