@@ -30,13 +30,10 @@ struct ContentView: View {
                     VStack(alignment: .leading) {
                         Text("Trending")
                             HStack {
-                                VStack (alignment: .leading) {
-                                    Image("hike")
-                                    .resizable()
-                                    .frame(width: 60, height: 70)
-                                    Text("These are the it girls").lineLimit(nil)
-                                        .padding(.leading, 0)
-                                }.frame(width: 120).padding(.leading, 0)
+                                GroupView()
+                                GroupView()
+                                GroupView()
+                            
                         }
                     }
                     
@@ -48,6 +45,18 @@ struct ContentView: View {
                 
             }.navigationBarTitle(Text("Groups"))
         }
+    }
+}
+
+struct GroupView: View {
+    var body: some View {
+        VStack (alignment: .leading) {
+            Image("hike")
+            .resizable()
+            .frame(width: 60, height: 70)
+            Text("These are the it girls").lineLimit(nil)
+                .padding(.leading, 0)
+        }.frame(width: 70, height: 170)
     }
 }
 
