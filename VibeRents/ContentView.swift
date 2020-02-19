@@ -17,7 +17,7 @@ struct ContentView: View {
     
     let posts: [Post] = [
         .init(id: 0, username: "Tanaya Henry", text: "Good old times in the bay area", imagename: "burger"),
-        .init(id: 0, username: "Tanaya Henry", text: "Good old times in the bay area", imagename: "burger")
+        .init(id: 1, username: "Tanaya Henry", text: "Good old times in the bay area", imagename: "post_puppy")
         
         
     ]
