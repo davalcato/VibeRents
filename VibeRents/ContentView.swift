@@ -66,11 +66,11 @@ struct GroupDetailView: View {
 struct GroupView: View {
     var body: some View {
         VStack (alignment: .leading) {
-            Image("hike")
+            Image("hike").renderingMode(.original)
             .resizable()
             .cornerRadius(12)
             .frame(width: 60, height: 70)
-            Text("These are the it girls").lineLimit(nil)
+            Text("These are the it girls").foregroundColor(.primary).lineLimit(nil)
                 .padding(.leading, 0)
         }.frame(width: 70, height: 170)
     }
@@ -96,7 +96,7 @@ struct PostView: View {
             Text("Post body text that will hopefully suport auto sizing vertically and span mutliple line").lineLimit(nil)
             Image(post.imagename)
                 .resizable()
-                .frame(width: 400, height: 535)
+                .frame(width: 400, height: 550)
 
         }.padding(.leading, -10)
     }
