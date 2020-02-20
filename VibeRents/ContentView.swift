@@ -25,19 +25,28 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                
-                ScrollView(.horizontal, showsIndicators: false) {
-                    VStack(alignment: .leading) {
-                        Text("Trending")
-                            HStack {
-                                GroupView()
-                                GroupView()
-                                GroupView()
-                            
+                VStack (alignment: .leading) {
+                    Text("Trending")
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        VStack(alignment: .leading) {
+                                HStack {
+                                    NavigationLink(destination: GroupDetailView()) {
+                                        GroupView()
+                                    }
+                                    
+                                    
+                                    GroupView()
+                                    GroupView()
+                                    GroupView()
+                                    GroupView()
+                                    GroupView()
+                                
+                            }
                         }
-                    }
-                    
-                }.frame(height: 180)
+                        
+                    }.frame(height: 180)
+                }
+            
             // This is the post rows
                 ForEach(posts, id: \.id) { post in
                 PostView(post: post)
@@ -45,6 +54,12 @@ struct ContentView: View {
                 
             }.navigationBarTitle(Text("Groups"))
         }
+    }
+}
+
+struct GroupDetailView: View {
+    var body: some View {
+        Text("Group DETAIL VIEW")
     }
 }
 
